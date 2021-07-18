@@ -1,0 +1,15 @@
+version: '3'
+services:
+  rails:
+    build:
+      context: .
+      args:
+        # Update 'VARIANT' to pick a Ruby version: 2, 2.7, 2.6, 2.5
+        - VARIANT=2.7
+        # Update 'NODE_VERSION' to set a node.js
+        - NODE_VERSION=14.*
+    command: sleep infinity
+    ports:
+      - 3000:3000
+    environment:
+      TZ: Asia/Tokyo
